@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:chrome": "playwright test --project=chromium",
+    "test:login": "playwright test Test/login.spec.ts --project=chromium --headed",
+    "r": "playwright show-report",
+    "test:login-csv": "playwright test Test/login-csv.spec.ts --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.0.10",
+    "prettier": "^3.8.1"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0"
+  }
+}

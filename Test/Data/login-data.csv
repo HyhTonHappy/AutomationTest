@@ -1,0 +1,6 @@
+username,password,expected_result,description
+standard_user,secret_sauce,success,Login thành công
+wrong_user,secret_sauce,fail,Login thất bại với sai username
+standard_user,wrong_pass,fail,Login thất bại với sai password
+,secret_sauce,fail,Login thất bại với để trống username
+standard_user,,fail,Login thất bại với để trống password
