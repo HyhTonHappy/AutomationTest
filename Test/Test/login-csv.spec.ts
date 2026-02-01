@@ -13,11 +13,10 @@ test.describe("Test Login from CSV", () => {
             for(let data of testData){
                 const loginPage = new LoginPage(page);
                 await loginPage.login(data.username, data.password);
-                const isSuccess = await loginPage.isLoginSuccessful();
-                if(data.result_expected === "success"){
-                    expect(isSuccess).toBeTruthy();
-                } else {
-                    expect(isSuccess).toBeFalsy();
+                if(data.result_expected=== "success"){
+                    await expect(page).toHaveURL(/dashboard/);
+                } else if (data.result_expected === "fail"){
+                    await expect(loginPage.errorMessage).toBeVisible();
                 }
             }
         })

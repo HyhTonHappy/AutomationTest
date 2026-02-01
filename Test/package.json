@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "playwright test",
     "test:chrome": "playwright test --project=chromium",
     "test:login": "playwright test Test/login.spec.ts --project=chromium --headed",
     "r": "playwright show-report",
-    "test:login-csv": "playwright test Test/login-csv.spec.ts --project=chromium --headed"
+    "test:login-csv": "playwright test Test/login-csv.spec.ts --project=chromium --headed",
+    "test:home": "playwright test Test/home.spec.ts --project=chromium --headed",
+    "test:mobile": "playwright test Test/mobile.spec.ts --project=chromium --headed",
+    "test:getbyrole": "playwright test getByRole --project=chromium --headed",
+    "test:api": "playwright test Test/testAPI --project=chromium --headed"
+
   },
   "keywords": [],
   "author": "",
@@ -16,7 +22,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.58.0",
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.1.0",
     "prettier": "^3.8.1"
   },
   "dependencies": {
