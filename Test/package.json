@@ -7,7 +7,7 @@
   "scripts": {
     "test": "playwright test",
     "test:chrome": "playwright test --project=chromium",
-    "test:login": "playwright test Test/login.spec.ts --project=chromium --headed",
+    "test:login": "playwright test Test/login.spec.ts --project=chromium",
     "r": "playwright show-report",
     "test:login-csv": "playwright test Test/login-csv.spec.ts --project=chromium --headed",
     "test:home": "playwright test Test/home.spec.ts --project=chromium --headed",
